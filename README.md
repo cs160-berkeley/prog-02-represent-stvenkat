@@ -1,14 +1,14 @@
 # PROG 02: Represent!
 
-Briefly describe your app here.
+Represent! is an app that keeps users informed about the officials from their area/state who represent them in government. 
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Sreesha Venkat ([sreeshavenkat@berkeley.edu](mailto:sreeshavenkat@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See PROG 02: Represent! here: https://youtu.be/PS5ZPBP95JU
 
 ## Screenshots
 
@@ -16,5 +16,4 @@ See [your demo video title here] (https://link_to_your_video)
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
+* Thanks to github user byencho who's code I used to build my 2D Picker!

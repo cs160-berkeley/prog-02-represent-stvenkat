@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_congressional_view"
+    tools:context="com.example.sreeshav.prog02.CongressionalView">
+
+    <TextView
+        android:id="@+id/rep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Representative Barbara Lee"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp"/>
+
+    <ImageView
+        android:id="@+id/imageRep1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/barbaraleecomp"/>
+
+    <android.support.design.widget.VisibilityAwareImageButton
+        android:id="@+id/ib1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="315dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/arrow"/>
+
+    <android.support.design.widget.VisibilityAwareImageButton
+        android:id="@+id/ib2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="315dp"
+        android:layout_marginTop="218dp"
+        android:src="@drawable/arrow"/>
+
+    <android.support.design.widget.VisibilityAwareImageButton
+        android:id="@+id/ib3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="315dp"
+        android:layout_marginTop="375dp"
+        android:src="@drawable/arrow"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/goButtonBackground"
+        android:layout_marginTop="160dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Party: Democrat"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/rep1Party"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website: lee.house.gov"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/rep1Website"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: barbaralee@us.gov"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/rep1Email"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Latest Tweet: 'I worked on this program as a young mom in #Oakland'"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/rep1Twitter"
+        android:layout_marginTop="69dp"
+        android:layout_marginLeft="116dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:id="@+id/senator1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Senator Barbara Boxer"
+        android:gravity="center"
+        android:layout_marginTop="165dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp"/>
+
+    <ImageView
+        android:id="@+id/imageSen1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="175dp"
+        android:src="@drawable/barbaraboxercomp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/goButtonBackground"
+        android:layout_marginTop="315dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Party: Democrat"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/sen1Party"
+        android:layout_marginTop="167dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website: boxer.gov"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/sen1Website"
+        android:layout_marginTop="188dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: bboxer@us.gov"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/sen1Email"
+        android:layout_marginTop="207dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Latest Tweet: 'I send my deep condolences to Justice Scalia's family'"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/sen1Twitter"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:id="@+id/sen2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Senator Dianne Feinstein"
+        android:gravity="center"
+        android:layout_marginTop="320dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp"/>
+
+    <ImageView
+        android:id="@+id/imageSen2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="340dp"
+        android:src="@drawable/diannefeinsteincomp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Party: Democrat"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/sen2Party"
+        android:layout_marginTop="325dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website: feinstein.gov"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/sen2Website"
+        android:layout_marginTop="345dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: dfeinstein@us.gov"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/sen2Email"
+        android:layout_marginTop="365dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Latest Tweet: 'I extend my condolences to Justice Scalia's family and friends'"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/sen2Twitter"
+        android:layout_marginTop="385dp"
+        android:layout_marginLeft="115dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/rep1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/goButtonBackground"
+        android:layout_marginTop="480dp"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
