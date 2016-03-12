@@ -12,6 +12,9 @@ import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * Created by sreeshav on 2/29/16.
  */
@@ -48,6 +51,7 @@ public class PhoneToWatchService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Bundle extras = intent.getExtras();
         final String clicked = extras.getString("Clicked");
+        final String clicked2 = extras.getString("nameAndParty");
 
         new Thread(new Runnable() {
             @Override
@@ -55,7 +59,7 @@ public class PhoneToWatchService extends Service {
                 //first, connect to the apiclient
                 mApiClient.connect();
                 //now that you're connected, send a message
-                sendMessage("/" + clicked, clicked);
+                sendMessage("/RAINING", clicked2);
             }
         }).start();
 

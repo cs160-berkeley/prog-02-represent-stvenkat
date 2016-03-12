@@ -14,6 +14,11 @@ import java.util.Locale;
 
 public class MainActivity extends WearableActivity {
 
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "bv1ldki88GOGuaZ4tUFx6ZHkr";
+    private static final String TWITTER_SECRET = "VyOwyYUAl73ndkruBDLNQ8qWwRDl0XSkKsPwfHjbryXrsUJZ6E";
+
+
     private static final SimpleDateFormat AMBIENT_DATE_FORMAT =
             new SimpleDateFormat("HH:mm", Locale.US);
 

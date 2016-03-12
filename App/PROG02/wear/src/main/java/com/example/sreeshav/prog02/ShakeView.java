@@ -28,7 +28,7 @@ public class ShakeView extends WearableActivity {
         mContainerView = (BoxInsetLayout) findViewById(R.id.container);
         mTextView = (TextView) findViewById(R.id.text);
         final GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
-        pager.setAdapter(new RepresentativeAdapter(this, getFragmentManager()));
+//        pager.setAdapter(new RepresentativeAdapter(this, getFragmentManager(), null));
     }
 
     @Override

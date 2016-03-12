@@ -1,5 +1,6 @@
 package com.example.sreeshav.prog02;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.BoxInsetLayout;
+import android.support.wearable.view.CardFragment;
 import android.support.wearable.view.FragmentGridPagerAdapter;
 import android.support.wearable.view.GridViewPager;
 import android.util.Log;
@@ -16,6 +18,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -33,6 +36,8 @@ public class MainView extends WearableActivity {
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     private ShakeView mShakeDetector;
+    public static ArrayList names = new ArrayList();
+    public static ArrayList parties = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +63,17 @@ public class MainView extends WearableActivity {
                                            }
                                        }
         );
+        Intent in = getIntent();
+        Bundle extras = in.getExtras();
+        final String val = extras.getString("VAL");
+        String[] parts = val.split(",");
+        for (int i = 0; i < parts.length; i++) {
+            if (i % 2 == 0) {
+                names.add(parts[i]);
+            } else {
+                parties.add(parts[i]);
+            }
+        }
 
         mContainerView = (BoxInsetLayout) findViewById(R.id.container);
         mTextView = (TextView) findViewById(R.id.text);
@@ -69,6 +85,45 @@ public class MainView extends WearableActivity {
                 .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mShakeDetector = new ShakeView();
 
+    }
+
+    public static class RepresentativeAdapter extends FragmentGridPagerAdapter {
+        private final Context mContext;
+        private List mRows;
+
+        public RepresentativeAdapter(Context ctx, FragmentManager f) {
+            super(f);
+            mContext = ctx;
+        }
+
+        // A simple container for static data in each page
+        private static class Page {
+            // static resources
+            String titleRes;
+            String textRes;
+            int iconRes = 1;
+
+        }
+
+        @Override
+        public Fragment getFragment(int row, int col) {
+            Page page = PAGES[row][col];
+            String title = (String) names.get(col);
+            String text = (String) parties.get(col);
+            CardFragment fragment = CardFragment.create(title, text);
+            return fragment;
+        }
+
+        private final Page[][] PAGES = new Page[1][parties.size()];
+
+        @Override
+        public int getRowCount() {
+            return PAGES.length;
+        }
+
+        public int getColumnCount(int rowNum) {
+            return PAGES[rowNum].length;
+        }
     }
 
     @Override

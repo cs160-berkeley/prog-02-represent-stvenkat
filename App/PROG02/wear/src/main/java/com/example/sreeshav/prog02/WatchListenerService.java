@@ -17,10 +17,14 @@ public class WatchListenerService extends WearableListenerService {
 
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
-        String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
-        Intent intent = new Intent(this, MainView.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (messageEvent.getPath().equalsIgnoreCase("/RAINING")) {
+            String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
+            Intent intent = new Intent(this, MainView.class);
+            intent.putExtra("VAL", value);
+
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             //you need to add this flag since you're starting a new activity from a service
-        startActivity(intent);
+            startActivity(intent);
+        }
     }
 }
